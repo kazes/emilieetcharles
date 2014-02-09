@@ -1,0 +1,126 @@
+/*------------------------------------------------------------------------------
+    CSS Document (http://www.w3.org/Style/CSS/)
+
+    project:    project name
+    created:    2012-01-04
+    author:     johdoe
+                
+----------------------------------------------------------------------------- */
+
+
+/*  =FRAMEWORK CSS (OOCSS and more...)
+----------------------------------------------------------------------------- */
+@import "fw.css";
+
+
+/*  =PRINT
+----------------------------------------------------------------------------- */
+@media print {
+    
+}
+
+
+/*  =RESET
+----------------------------------------------------------------------------- */
+* { margin:0; padding:0; vertical-align:baseline; }
+
+body {
+    font-family:Arial, Verdana, Helvetica, sans-serif;
+    font-size:68.8%; /* :INFO:1em = 11px */
+    margin:0;
+    height:100%;
+    color:#000;
+    background:#fff;
+}
+
+input { height:auto; }
+a img, fieldset, form { border:0; }
+ins, abbr, acronym { text-decoration:none; border:0; font-style:normal; }
+a:hover ins, a:hover abbr, a:hover acronym { text-decoration:underline; }
+address { font-style:normal; }
+ul { list-style:none; }
+q:before, q:after { content:''; }
+small { font-size:0.9em; }
+input, select, textarea, button { font:1em Arial, Verdana, Helvetica, sans-serif; }
+input, textarea, select {/*not working with selects on IE6 IE7*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+textarea { overflow:auto; }
+
+sup { vertical-align:text-top; }
+
+hr,
+.accessibility { 
+    position:absolute;
+    left:-9999em;
+}
+
+button {
+    width:auto;
+    overflow:visible;
+    border:0;
+    background:none;
+    cursor:pointer;
+}
+button::-moz-focus-inner { /*firefox extra padding removed*/
+    border: 0;
+    padding: 0;
+}
+input.submit {
+    width:auto !important;
+    height:auto !important;
+    cursor:pointer !important;
+    border:0 !important;
+    overflow:visible;
+}
+
+
+/*  =GENERIC (colors, backgrounds, titles, buttons, ...)
+----------------------------------------------------------------------------- */
+#content {
+    margin:0 auto;
+    width:960px;
+    position:relative;
+}
+
+a {
+    color:#666;
+    cursor:pointer;
+}
+#access-keys {
+    position:absolute;
+    top:-500px;
+    left:0;
+}
+#access-keys a:focus {
+    position:absolute;
+    top:505px;
+    left:450px;
+    z-index:10;
+    color:#000;
+    width:250px;
+    font-size:1.7em;
+    background:white;
+    padding:5px;
+}
+
+
+/*  =STRUCTURE
+----------------------------------------------------------------------------- */
+
+
+
+/*  =HEADER
+----------------------------------------------------------------------------- */
+
+
+
+/*  =FOOTER
+----------------------------------------------------------------------------- */
+
+
+
+
+/* END */
