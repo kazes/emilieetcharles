@@ -19,6 +19,7 @@
 
 body {
   font-family: "Merriweather", serif;
+  font-weight: 300;
   font-size: 12px;
   margin: 0;
   height: 100%;
@@ -91,14 +92,41 @@ input.submit {
   overflow: visible; }
 
 /* GENERIC */
-.page-width {
-  margin: 0 auto;
-  width: 960px;
-  position: relative; }
-
 a {
   color: #666;
   cursor: pointer; }
+
+.img-100 {
+  width: 100%;
+  max-width: 100%; }
+
+.bg-marroon {
+  background: #8f6f4d;
+  color: #ffffff; }
+.color-marroon-dark{
+    color: #4e3b2b;
+}
+/* FONTS */
+.font-15 {
+  font-size: 15px; }
+
+.font-28 {
+  font-size: 28px; }
+
+.font-josefin-semibold {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600; }
+
+/* STRUCTURE */
+.page-content {
+  padding-top: 108px;
+  /* header height */ }
+
+.page-width {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  position: relative; }
 
 /* HEADER */
 #header {
@@ -107,9 +135,8 @@ a {
   position: fixed;
   background: white;
   height: 108px;
-  box-shadow: 0px 10px 40px rgba(255, 255, 255, 0.5); 
-  right: 0;
-}
+  /* box-shadow: 0px 27px 46px white; */
+  right: 0; }
 
 /* HEADER: NAV */
 #nav {
@@ -136,5 +163,14 @@ a {
   width: 134px;
   padding: 0;
   height: 98px; }
+
+/* LAYER 1 : COVER */
+#cover {
+  padding-top: 60px; }
+
+/* LAYER 2 : YES */
+#yes {
+    background: url(../img/skin/bg-yes.jpg) center top no-repeat;
+  height: 500px; }
 
 /* END */
