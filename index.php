@@ -44,32 +44,62 @@
                 </p>
             </div>
 
+
+            <!-- Emilie a dit oui ! -->
             <div class="bg-marroon">
                 <div class="page-width " id="yes">
-                    <h2 class="font-josefin-semibold font-28 ttu">émilie a dit oui !</h2>
-                    <p>
-                        Emilie a dit « oui » ! Enfin, plutôt « vâng »,
-                        parce que c’était sur la Baie d’Ha Long l’été dernier,
-                        un bel endroit pour se jeter à l’eau, non ?
-                        Depuis, nous n’avons pas touché terre.
-                        Nous n’accosterons que le 2 mai prochain à Bénodet.
-                        <br/>
-                        <br/>
-                        Nous comptons sur vous pour fêter ça !
-                    </p>
+                    <div class="story-container">
+                        <h2 class="title font-josefin-semibold font-28 ttu">
+                            Émilie a dit oui !
+                        </h2>
+                        <p class="story">
+                            Emilie a dit « oui » ! Enfin, plutôt « vâng », <br/>
+                            parce que c’était sur la Baie d’Ha Long l’été dernier,<br/>
+                            un bel endroit pour se jeter à l’eau, non ?<br/>
+                            Depuis, nous n’avons pas touché terre.<br/>
+                            Nous n’accosterons que le 2 mai prochain à Bénodet.<br/>
+                            <br/>
+                            <br/>
+                            Nous comptons sur vous pour fêter ça !
+                        </p>
+                    </div>
                 </div>
             </div>
 
 
-            <?php for ($i = 1; $i <= 100; $i++) { ?>
-                page-width <?php echo $i; ?><br/>
-            <?php } ?>
 
+            <!-- D'autres questions ? -->
+            <div class="bg-marroon-light">
+                <div class="page-width" id="questions">
+
+                    <img class="db ma" src="img/data/dautres-questions.png" alt="D'autres questions ?">
+
+                    <div class="line contact-container">
+                        <p class="contact unit size1of3">
+                            <span class="ttu db font-18 merriweather-bold">écrivez-nous ?</span>
+                            <a href="mailto:charlesandemilie@gmail.com">charlesandemilie@gmail.com</a>
+                        </p>
+
+                        <p class="contact unit size1of3">
+                            <span class="ttu db font-18 merriweather-bold">appelez émilie</span>
+                            06 99 35 00 22
+                        </p>
+
+                        <p class="contact unit size1of3">
+                            <span class="ttu db font-18 merriweather-bold">appelez charles</span>
+                            06 59 71 13 61
+                        </p>
+                    </div>
+
+                    <img class="db ma" src="img/data/a-tres-bientot-le-2-mai-2014.png" alt="à très bientôt le 2 mai 2014">
+
+                </div>
+            </div>
 
             <div class="page-width" id="footer">
-
-                hello footer
-
+                Copyright © 2014 Florian et Bérénice.
+                Design by <a href="http://www.berenicek.com" target="_blank">Bérénice</a>.
+                Code by <a href="http://www.papadiv.com" target="_blank">Florian</a>
             </div>
         </div>
     </div>
