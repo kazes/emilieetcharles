@@ -46,13 +46,13 @@
 
 
             <!-- Emilie a dit oui ! -->
-            <div class="bg-marroon">
-                <div class="page-width " id="yes">
+            <div class="bg-marroon dn">
+                <div class="page-width" id="yes">
                     <div class="story-container">
                         <h2 class="title font-josefin-semibold font-28 ttu">
                             Émilie a dit oui !
                         </h2>
-                        <p class="story">
+                        <p class="story text-normal-1">
                             Emilie a dit « oui » ! Enfin, plutôt « vâng », <br/>
                             parce que c’était sur la Baie d’Ha Long l’été dernier,<br/>
                             un bel endroit pour se jeter à l’eau, non ?<br/>
@@ -66,10 +66,100 @@
                 </div>
             </div>
 
+            
+            <!-- Le premier mai -->
+            <div class="page-width" id="d-day">
+                <img class="db img-100 ma" src="img/data/le-premier-mai.png" alt="Le premier mai. Ce week-end là, c'est sûr vous n'acheterez pas de muguet"/>
+
+                <div class="program-container">
+                    <div class="line">
+                        <div class="program unit size1of3">
+                            <div class="inside">
+                                <img class="img-100 image" src="img/data/entete-mariage.png" alt="Mariage"/>
+                                <h4 class="title">vendredi 2 mai - 15h30</h4>
+                                <p class="text text-normal-1">
+                                    Nous nous marions ! <br/>
+                                    Rendez-vous à l’église St Thomas Becket, <br/>
+                                    sur le port de Bénodet.
+                                </p>
+                                <p class="link-more">
+                                    <a href="#">rendez vous au mariage</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="program unit size1of3">
+                            <div class="inside ma">
+                                <img class="img-100 image" src="img/data/entete-reception.png" alt="Réception"/>
+                                <h4 class="title">vendredi 2 mai - 18h</h4>
+                                <p class="text text-normal-1">
+                                    Nous célébrons ! Au manoir de Kerouzien, <br/>
+                                    à Plomelin, pour un cocktail suivi d’un dîner <br/>
+                                    & d’une soirée jusqu’au petit matin.
+                                </p>
+                                <p class="link-more">
+                                    <a href="#">rendez vous à la réception</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="program unit size1of3 line">
+                            <div class="inside fr">
+                                <img class="img-100 image" src="img/data/entete-brunch.png" alt="Brunch"/>
+                                <h4 class="title">samedi 3 mai - 12h30</h4>
+                                <p class="text text-normal-1">
+                                    Retour au manoir de Kerouzien, à Plomelin, <br/>
+                                    pour un déjeuner breton, <br/>
+                                    le corps fourbu mais l’esprit léger.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pointilles"></div>
+
+                    <div class="accomodation">
+                        <div class="line accomodation-container">
+                            <div class="program unit size1of2">
+                                <div class="inside">
+                                    <img class="img-100 image" src="img/data/entete-tourisme.png" alt="Tourisme"/>
+                                    <h4 class="title">jeudi 1er mai - dimanche 4 mai</h4>
+                                    <p class="text text-normal-1">
+                                        C’est très beau la Bretagne, <br/>
+                                        profitez-en vous aussi, <br/>
+                                        de votre week-end du 1er mai !
+                                    </p>
+                                    <p class="link-more">
+                                        <a href="#">découvrez la région</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="program unit size1of2">
+                                <div class="inside ma">
+                                    <img class="img-100 image" src="img/data/entete-et-la-nuit.png" alt="Et la nuit ?"/>
+                                    <h4 class="title">hôtels, b&b, etc.</h4>
+                                    <p class="text text-normal-1">
+                                        Rien ne sert de courir, <br/>
+                                        il faut dormir dans le coin ! <br/>
+                                        Réservez vite, c’est un long week-end  !
+                                    </p>
+                                    <p class="link-more">
+                                        <a href="#">trouvez votre hôtel</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
 
 
             <!-- D'autres questions ? -->
-            <div class="bg-marroon-light">
+            <div class="bg-marroon">
                 <div class="page-width" id="questions">
 
                     <img class="db ma" src="img/data/dautres-questions.png" alt="D'autres questions ?">
