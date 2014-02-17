@@ -13,6 +13,7 @@ var d = document;
 var w = window;
 pm = {};
 
+
 var debug = /localhost|flobou/.test(d.location.href);// 'true' in dev mode;
 
 /*  =UTILITIES */
@@ -27,8 +28,8 @@ var log = function(x) {
 ----------------------------------------------------------------------------- */
 $(d).ready(function(){
 
-    // call functions
-    pm.example();                 // just an example
+
+    pm.headerActive();
 
 
 });
@@ -36,9 +37,14 @@ $(d).ready(function(){
 
 /*  =EXAMPLE
 ----------------------------------------------------------------------------- */
-pm.example = function() {
-    log('example function');
-    
+pm.headerActive = function() {
+    var $header = $('#header'),
+        $w = $(w);
+
+    $w.on('scroll', function(){
+        var scroll_val = $w.scrollTop();
+        $header[scroll_val > 30 ? 'addClass' : 'removeClass']('active');
+    });
 };
 
 

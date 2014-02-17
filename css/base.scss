@@ -9,92 +9,116 @@
 /* colors */
 /* fonts */
 @import url(fw.css);
+
 /*  =PRINT */
 /*  =RESET
 ----------------------------------------------------------------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline; }
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+
+}
 
 body {
-  font-family: "Merriweather", serif;
-  font-weight: 300;
-  font-size: 12px;
-  margin: 0;
-  height: 100%;
-  color: #8f6f4d;
-  background: #fff; }
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+    height: 100%;
+    color: #8f6f4d;
+    background: #fff;
+
+}
 
 input {
-  height: auto; }
+    height: auto;
+}
 
 a img, fieldset, form {
-  border: 0; }
+    border: 0;
+
+}
 
 ins, abbr, acronym {
-  text-decoration: none;
-  border: 0;
-  font-style: normal; }
+    text-decoration: none;
+    border: 0;
+    font-style: normal;
+}
 
 a:hover ins, a:hover abbr, a:hover acronym {
-  text-decoration: underline; }
+    text-decoration: underline;
+}
 
 address {
-  font-style: normal; }
+    font-style: normal;
+}
 
 ul {
-  list-style: none; }
+    list-style: none;
+}
 
 q:before, q:after {
-  content: ''; }
+    content: '';
+}
 
 small {
-  font-size: 0.9em; }
+    font-size: 0.9em;
+}
 
 input, select, textarea, button {
-  font: 1em Arial, Verdana, Helvetica, sans-serif; }
+    font: 1em Arial, Verdana, Helvetica, sans-serif;
+}
 
 input, textarea, select {
-  /*not working with selects on IE6 IE7*/
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+    /*not working with selects on IE6 IE7*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 textarea {
-  overflow: auto; }
+    overflow: auto;
+}
 
 sup {
-  vertical-align: text-top; }
+    vertical-align: text-top;
+}
 
 hr,
 .accessibility {
-  position: absolute;
-  left: -9999em; }
+    position: absolute;
+    left: -9999em;
+}
 
 button {
-  width: auto;
-  overflow: visible;
-  border: 0;
-  background: none;
-  cursor: pointer; }
+    width: auto;
+    overflow: visible;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
 
-button::-moz-focus-inner {
-  /*firefox extra padding removed*/
-  border: 0;
-  padding: 0; }
+button::-moz-focus-inner { /*firefox extra padding removed*/
+    border: 0;
+    padding: 0;
+}
 
 input.submit {
-  width: auto !important;
-  height: auto !important;
-  cursor: pointer !important;
-  border: 0 !important;
-  overflow: visible; }
+    width: auto !important;
+    height: auto !important;
+    cursor: pointer !important;
+    border: 0 !important;
+    overflow: visible;
+
+}
 
 /* GENERIC */
+
 a {
-  color: #666;
-  cursor: pointer; }
+    color: #666;
+    cursor: pointer;
+}
 
 .img-100 {
   max-width: 100%; }
@@ -112,45 +136,52 @@ a {
     background: url(../img/skin/pointilles.png) 0 0 repeat-x;
     height: 2px;
 }
-
 /* FONTS */
 .font-15 {
-  font-size: 15px; }
+    font-size: 15px;
+}
 
 .font-18 {
   font-size: 18px; }
 
 .font-28 {
-  font-size: 28px; }
+    font-size: 28px;
+}
 
 .merriweather-bold {
   font-weight: 700; }
 
 .font-josefin-semibold {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 600; }
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
 
 /* STRUCTURE */
 .page-content {
-  padding-top: 108px;
-  /* header height */ }
+    padding-top: 108px; /* header height */
+}
 
 .page-width {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 960px;
-  position: relative; }
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    position: relative;
+}
 
 /* HEADER */
 #header {
-  z-index: 10;
-  left: 0;
-  position: fixed;
-  background: white;
-  height: 108px;
-  /* box-shadow: 0px 27px 46px white; */
-  right: 0; }
-
+    z-index: 10;
+    left: 0;
+    position: fixed;
+    background: white;
+    height: 108px;
+    right: 0;
+    border-bottom:1px solid #fff;
+    transition:border-bottom 300ms ease-in-out;
+}
+#header.active {
+    border-bottom:1px solid #8f6f4d;
+}
 /* HEADER: NAV */
 #nav {
   width: 960px;
@@ -160,26 +191,29 @@ a {
   text-transform: uppercase; }
 
 #nav li {
-  vertical-align: middle;
-  display: inline-block;
-  text-align: left; }
+    vertical-align: middle;
+    display: inline-block;
+    text-align: left;
+}
 
 #nav a {
   text-decoration: none;
   padding: 0 18px; }
 
 #nav-4 a {
-  display: block;
-  text-indent: -9999px;
-  overflow: hidden;
-  background: url(../img/skin/logo-emilie-et-charles.png) 0 0 no-repeat;
-  width: 134px;
-  padding: 0;
-  height: 98px; }
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../img/skin/logo-emilie-et-charles.png) 0 0 no-repeat;
+    width: 134px;
+    padding: 0;
+    height: 98px;
+}
 
 /* LAYER 1 : COVER */
 #cover {
-  padding-top: 60px; }
+    padding-top: 60px;
+}
 
 /* LAYER 2 : YES */
 #yes {

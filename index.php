@@ -29,7 +29,7 @@
                     <li id="nav-3"><a href="#">S'organiser</a></li>
                     <li id="nav-4"><a href="#" title="Retour en haut de page">Retour en haut de page</a></li>
                     <li id="nav-5"><a href="#">Partager</a></li>
-                    <li id="nav-6"><a target="_blank" href="#http://charlesetemilie.zankyou.com/fr/liste-de-mariage">Liste de mariage</a></li>
+                    <li id="nav-6"><a target="_blank" href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage">Liste de mariage</a></li>
                     <li id="nav-7"><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
 
 
             <!-- Emilie a dit oui ! -->
-            <div class="bg-marroon dn">
+            <div class="bg-marroon">
                 <div class="page-width" id="yes">
                     <div class="story-container">
                         <h2 class="title font-josefin-semibold font-28 ttu">
