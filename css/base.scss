@@ -17,7 +17,6 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-
 }
 
 body {
@@ -28,69 +27,28 @@ body {
     height: 100%;
     color: #8f6f4d;
     background: #fff;
-
 }
-
 input {
     height: auto;
 }
-
 a img, fieldset, form {
     border: 0;
-
 }
-
-ins, abbr, acronym {
-    text-decoration: none;
-    border: 0;
-    font-style: normal;
-}
-
-a:hover ins, a:hover abbr, a:hover acronym {
-    text-decoration: underline;
-}
-
-address {
-    font-style: normal;
-}
-
 ul {
     list-style: none;
 }
-
-q:before, q:after {
-    content: '';
-}
-
-small {
-    font-size: 0.9em;
-}
-
 input, select, textarea, button {
     font: 1em Arial, Verdana, Helvetica, sans-serif;
 }
-
 input, textarea, select {
     /*not working with selects on IE6 IE7*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 textarea {
     overflow: auto;
 }
-
-sup {
-    vertical-align: text-top;
-}
-
-hr,
-.accessibility {
-    position: absolute;
-    left: -9999em;
-}
-
 button {
     width: auto;
     overflow: visible;
@@ -98,7 +56,6 @@ button {
     background: none;
     cursor: pointer;
 }
-
 button::-moz-focus-inner { /*firefox extra padding removed*/
     border: 0;
     padding: 0;
@@ -114,15 +71,14 @@ input.submit {
 }
 
 /* GENERIC */
-
 a {
     color: #666;
     cursor: pointer;
 }
-
 .img-100 {
   max-width: 100%; }
 
+/* COLORS */
 .bg-marroon {
   background: #8f6f4d;
   color: #ffffff; }
@@ -136,6 +92,7 @@ a {
     background: url(../img/skin/pointilles.png) 0 0 repeat-x;
     height: 2px;
 }
+
 /* FONTS */
 .font-15 {
     font-size: 15px;
@@ -147,14 +104,16 @@ a {
 .font-28 {
     font-size: 28px;
 }
-
 .merriweather-bold {
   font-weight: 700; }
-
 .font-josefin-semibold {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
 }
+.text-normal-1 {
+    font-size: 12px;
+    line-height: 20px; }
+
 
 /* STRUCTURE */
 .page-content {
@@ -187,7 +146,8 @@ a {
   width: 960px;
   text-align: center;
   padding-top: 4px;
-  font-size: 14px;
+    font-size: 14px;
+    font-style: italic;
   text-transform: uppercase; }
 
 #nav li {
@@ -195,11 +155,9 @@ a {
     display: inline-block;
     text-align: left;
 }
-
 #nav a {
   text-decoration: none;
   padding: 0 18px; }
-
 #nav-4 a {
     display: block;
     text-indent: -9999px;
@@ -210,31 +168,43 @@ a {
     height: 98px;
 }
 
-/* LAYER 1 : COVER */
-#cover {
+/* 1) : LE MARIAGE */
+#mariage {
     padding-top: 60px;
 }
+#mariage .text {
+    padding: 35px 0 75px 0;
+    font-size: 15px;
+    color: #4e3b2b;
+    text-align: center;
+}
 
-/* LAYER 2 : YES */
-#yes {
+/* 2) LA DEMANDE */
+#demande {
   background: url(../img/skin/bg-yes.jpg) center top no-repeat;
   height: 500px; }
 
-#yes .story-container {
+#demande .story-container {
   width: 366px;
   position: absolute;
   text-align: center;
   top: 135px;
   left: 512px; }
 
-#yes .title {
-  padding-bottom: 20px; }
+#demande .title {
+  padding-bottom: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+#demande .story {
+    font-size: 12px;
+    line-height: 20px;
+}
 
-.text-normal-1 {
-  font-size: 12px;
-  line-height: 20px; }
 
-/* LAYER 3 : PROGRAM */
+/* 3) : S'ORGANISER */
 .program-container,
 .program-container a {
   color: #4e3b2b; }

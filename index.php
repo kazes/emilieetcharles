@@ -4,9 +4,7 @@
     <meta charset="utf-8">
 
     <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-
-
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Merriweather:400,300,700,400italic,300italic,700italic' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/base.css" type="text/css">
 
@@ -24,11 +22,11 @@
         <div id="header">
             <div class="page-width">
                 <ul id="nav">
-                    <li id="nav-1"><a href="#">Le mariage</a></li>
-                    <li id="nav-2"><a href="#">La demande</a></li>
-                    <li id="nav-3"><a href="#">S'organiser</a></li>
-                    <li id="nav-4"><a href="#" title="Retour en haut de page">Retour en haut de page</a></li>
-                    <li id="nav-5"><a href="#">Partager</a></li>
+                    <li id="nav-1"><a href="#mariage">Le mariage</a></li>
+                    <li id="nav-2"><a href="#demande">La demande</a></li>
+                    <li id="nav-3"><a href="#sorganiser">S'organiser</a></li>
+                    <li id="nav-4"><a href="#" title="Retour en haut de page">Accueil</a></li>
+                    <li id="nav-5"><a href="#partager">Partager</a></li>
                     <li id="nav-6"><a target="_blank" href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage">Liste de mariage</a></li>
                     <li id="nav-7"><a href="#">Contact</a></li>
                 </ul>
@@ -36,23 +34,25 @@
         </div>
 
         <div class="page-content">
-            <div id="cover" class="page-width">
 
+            <!-- 1) LE MARIAGE -->
+            <div id="mariage" class="page-width">
                 <img src="img/data/cover.png" class="img-100 ma db" alt="Emilie et Charles, le 2 Mai 2014 à Bénodet"/>
-                <p class="font-15 color-marroon-dark tac" style="padding: 35px 0 75px 0">
-                    Émilie + Charles = <3 : C’est la seule équation que Charles ait jamais réussi à résoudre… et encore il a mis 8 ans !
+                <p class="text">
+                    Émilie + Charles = <3 : C’est la seule équation que Charles ait jamais réussi à résoudre…
+                    et encore il a mis 8 ans !
                 </p>
             </div>
 
 
-            <!-- Emilie a dit oui ! -->
+            <!-- 2) LA DEMANDE -->
             <div class="bg-marroon">
-                <div class="page-width" id="yes">
+                <div id="demande" class="page-width">
                     <div class="story-container">
-                        <h2 class="title font-josefin-semibold font-28 ttu">
+                        <h2 class="title">
                             Émilie a dit oui !
                         </h2>
-                        <p class="story text-normal-1">
+                        <p class="story">
                             Emilie a dit « oui » ! Enfin, plutôt « vâng », <br/>
                             parce que c’était sur la Baie d’Ha Long l’été dernier,<br/>
                             un bel endroit pour se jeter à l’eau, non ?<br/>
@@ -67,8 +67,8 @@
             </div>
 
             
-            <!-- Le premier mai -->
-            <div class="page-width" id="d-day">
+            <!-- 3) S'ORGANISER -->
+            <div class="page-width" id="sorganiser">
                 <img class="db img-100 ma" src="img/data/le-premier-mai.png" alt="Le premier mai. Ce week-end là, c'est sûr vous n'acheterez pas de muguet"/>
 
                 <div class="program-container">
@@ -83,7 +83,7 @@
                                     sur le port de Bénodet.
                                 </p>
                                 <p class="link-more">
-                                    <a href="#">rendez vous au mariage</a>
+                                    <a title="plan de Bénodet (pdf)" href="http://www.benodet.fr/modules/kameleon/upload/BD_Benodet_plan_21x27_1305.pdf">rendez vous au mariage</a>
                                 </p>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                     & d’une soirée jusqu’au petit matin.
                                 </p>
                                 <p class="link-more">
-                                    <a href="#">rendez vous à la réception</a>
+                                    <a title="Trajet de Bénodet centre au Manoir de Kerouzien (avec google map)" href="https://www.google.com/maps/preview/dir/La+Croisette+Caf%C3%A9,+Quai+du+Commandant+l'Herminier,+29950+B%C3%A9nodet,+France/SARL+Manoir+de+Kerouzien,+Kerouzien,+29700+Plomelin,+France/@47.8962699,-4.1795827,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x4810d2efdc682f93:0x672bb8b6ce9703f7!2m2!1d-4.115871!2d47.87654!1m5!1m1!1s0x4810d34a152e5547:0x661e4bc5306224b1!2m2!1d-4.149309!2d47.90746" target="_blank">rendez vous à la réception</a>
                                 </p>
                             </div>
                         </div>
