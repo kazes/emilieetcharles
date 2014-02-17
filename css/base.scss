@@ -284,6 +284,23 @@ a {
 .smartphone .android:hover {
   margin-left: 5px; }
 
+/* 5) LISTE DE MARIAGE */
+#liste-de-mariage {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#liste-de-mariage .title {
+    margin: 0 auto 22px auto;
+    display: block;
+}
+#liste-de-mariage .bt-visitez {
+background: url(../img/skin/bt-visitez-notre-liste-de-mariage.png) 0 0 no-repeat;
+    width: 640px;
+    height: 53px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* 6) QUESTIONS */
 #questions {
   padding-top: 100px;

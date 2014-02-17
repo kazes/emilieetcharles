@@ -177,7 +177,8 @@
 
             <!-- 5) LISTE DE MARIAGE -->
             <div id="liste-de-mariage" class="page-width">
-                <a href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage">liste de mariage</a>
+                <img class="title" src="img/data/liste-de-mariage.png" alt="Liste de mariage. Si vous souhaitez nous offrir un petit cadeau pour bien commencer notre vie à deux !"/>
+                <a href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage" class="bt-visitez">visitez notre liste de mariage</a>
             </div>
 
 
