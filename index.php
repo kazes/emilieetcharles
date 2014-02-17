@@ -27,7 +27,7 @@
                     <li id="nav-3"><a href="#sorganiser">S'organiser</a></li>
                     <li id="nav-4"><a href="#" title="Retour en haut de page">Accueil</a></li>
                     <li id="nav-5"><a href="#partager">Partager</a></li>
-                    <li id="nav-6"><a target="_blank" href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage">Liste de mariage</a></li>
+                    <li id="nav-6"><a href="#liste-de-mariage">Liste de mariage</a></li>
                     <li id="nav-7"><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -150,17 +150,30 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
 
 
 
-            <!-- D'autres questions ? -->
+            <!-- 4) PARTAGER -->
             <div class="bg-marroon">
-                <div class="page-width" id="questions">
+                <div id="partager" class="page-width">
+                    partager
+                </div>
+            </div>
+
+
+
+            <!-- 5) LISTE DE MARIAGE -->
+            <div id="liste-de-mariage" class="page-width">
+                <a href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage">liste de mariage</a>
+            </div>
+
+
+            <!-- 6) QUESTIONS -->
+            <div class="bg-marroon">
+                <div id="questions" class="page-width">
 
                     <img class="db ma" src="img/data/dautres-questions.png" alt="D'autres questions ?">
 
@@ -186,8 +199,10 @@
                 </div>
             </div>
 
+
+            <!-- FOOTER -->
             <div class="page-width" id="footer">
-                Copyright © 2014 Florian et Bérénice.
+                Copyright © 2014 <a href="http://www.papadiv.com" target="_blank">Florian</a> et <a href="http://www.berenicek.com" target="_blank">Bérénice</a>.
                 Design by <a href="http://www.berenicek.com" target="_blank">Bérénice</a>.
                 Code by <a href="http://www.papadiv.com" target="_blank">Florian</a>
             </div>
