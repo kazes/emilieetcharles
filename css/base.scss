@@ -9,72 +9,68 @@
 /* colors */
 /* fonts */
 @import url(fw.css);
-
 /*  =PRINT */
 /*  =RESET
 ----------------------------------------------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
 
 body {
-    font-family: "Merriweather", serif;
-    font-weight: 300;
-    font-size: 12px;
-    margin: 0;
-    height: 100%;
-    color: #8f6f4d;
-    background: #fff;
-}
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 12px;
+  margin: 0;
+  height: 100%;
+  color: #8f6f4d;
+  background: #fff; }
+
 input {
-    height: auto;
-}
+  height: auto; }
+
 a img, fieldset, form {
-    border: 0;
-}
+  border: 0; }
+
 ul {
-    list-style: none;
-}
+  list-style: none; }
+
 input, select, textarea, button {
-    font: 1em Arial, Verdana, Helvetica, sans-serif;
-}
+  font: 1em Arial, Verdana, Helvetica, sans-serif; }
+
 input, textarea, select {
-    /*not working with selects on IE6 IE7*/
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+  /*not working with selects on IE6 IE7*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 textarea {
-    overflow: auto;
-}
+  overflow: auto; }
+
 button {
-    width: auto;
-    overflow: visible;
-    border: 0;
-    background: none;
-    cursor: pointer;
-}
-button::-moz-focus-inner { /*firefox extra padding removed*/
-    border: 0;
-    padding: 0;
-}
+  width: auto;
+  overflow: visible;
+  border: 0;
+  background: none;
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  /*firefox extra padding removed*/
+  border: 0;
+  padding: 0; }
 
 input.submit {
-    width: auto !important;
-    height: auto !important;
-    cursor: pointer !important;
-    border: 0 !important;
-    overflow: visible;
-
-}
+  width: auto !important;
+  height: auto !important;
+  cursor: pointer !important;
+  border: 0 !important;
+  overflow: visible; }
 
 /* GENERIC */
 a {
-    color: #666;
-    cursor: pointer;
-}
+  color: #666;
+  cursor: pointer; }
+
 .img-100 {
   max-width: 100%; }
 
@@ -88,96 +84,93 @@ a {
 
 .color-marroon-dark {
   color: #4e3b2b; }
+
 .pointilles {
-    background: url(../img/skin/pointilles.png) 0 0 repeat-x;
-    height: 2px;
-}
+  background: url(../img/skin/pointilles.png) 0 0 repeat-x;
+  height: 2px; }
 
 /* FONTS */
 .font-15 {
-    font-size: 15px;
-}
+  font-size: 15px; }
 
 .font-18 {
   font-size: 18px; }
 
 .font-28 {
-    font-size: 28px;
-}
+  font-size: 28px; }
+
 .merriweather-bold {
   font-weight: 700; }
-.font-josefin-semibold {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 600;
-}
-.text-normal-1 {
-    font-size: 12px;
-    line-height: 20px; }
 
+.font-josefin-semibold {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600; }
+
+.text-normal-1 {
+  font-size: 12px;
+  line-height: 20px; }
 
 /* STRUCTURE */
 .page-content {
-    padding-top: 108px; /* header height */
-}
+  padding-top: 108px;
+  /* header height */ }
 
 .page-width {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 960px;
-    position: relative;
-}
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  position: relative; }
 
 /* HEADER */
 #header {
-    z-index: 10;
-    left: 0;
-    position: fixed;
-    background: white;
-    height: 108px;
-    right: 0;
-    border-bottom:1px solid #fff;
-    transition:border-bottom 300ms ease-in-out;
-}
+  z-index: 10;
+  left: 0;
+  position: fixed;
+  background: white;
+  height: 108px;
+  right: 0;
+  border-bottom: 1px solid #fff;
+  transition: border-bottom 300ms ease-in-out; }
+
 #header.active {
-    border-bottom:1px solid #8f6f4d;
-}
+  border-bottom: 1px solid #8f6f4d; }
+
 /* HEADER: NAV */
 #nav {
   width: 960px;
   text-align: center;
   padding-top: 4px;
-    font-size: 14px;
-    font-style: italic;
+  font-size: 14px;
+  font-style: italic;
   text-transform: uppercase; }
 
 #nav li {
-    vertical-align: middle;
-    display: inline-block;
-    text-align: left;
-}
+  vertical-align: middle;
+  display: inline-block;
+  text-align: left; }
+
 #nav a {
   text-decoration: none;
   padding: 0 18px; }
+
 #nav-4 a {
-    display: block;
-    text-indent: -9999px;
-    overflow: hidden;
-    background: url(../img/skin/logo-emilie-et-charles.png) 0 0 no-repeat;
-    width: 134px;
-    padding: 0;
-    height: 98px;
-}
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(../img/skin/logo-emilie-et-charles.png) 0 0 no-repeat;
+  width: 134px;
+  padding: 0;
+  height: 98px; }
 
 /* 1) : LE MARIAGE */
 #mariage {
-    padding-top: 60px;
-}
+  padding-top: 60px; }
+
 #mariage .text {
-    padding: 35px 0 75px 0;
-    font-size: 15px;
-    color: #4e3b2b;
-    text-align: center;
-}
+  padding: 35px 0 75px 0;
+  font-size: 15px;
+  color: #4e3b2b;
+  text-align: center; }
 
 /* 2) LA DEMANDE */
 #demande {
@@ -193,25 +186,23 @@ a {
 
 #demande .title {
   padding-bottom: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 600;
-    font-size: 28px;
-    text-transform: uppercase;
-}
-#demande .story {
-    font-size: 12px;
-    line-height: 20px;
-}
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  text-transform: uppercase; }
 
+#demande .story {
+  font-size: 12px;
+  line-height: 20px; }
 
 /* 3) : S'ORGANISER */
 .program-container,
 .program-container a {
   color: #4e3b2b; }
-.program {
-    padding-bottom: 10px;
 
-}
+.program {
+  padding-bottom: 10px; }
+
 .program .title {
   font-size: 14px;
   text-transform: uppercase;
@@ -235,18 +226,65 @@ a {
   padding-top: 40px;
   font-weight: 700;
   /* bold */ }
+
 .accomodation {
-    background: url(../img/skin/flowers-bottom.png) center bottom no-repeat;
-padding-bottom: 77px;
-}
+  background: url(../img/skin/flowers-bottom.png) center bottom no-repeat;
+  padding-bottom: 77px; }
+
 .accomodation-container {
-    width:60.41666666666666%;
-    margin: 0 auto;
-    padding: 31px 0 0 0;
+  width: 60.41666666666666%;
+  margin: 0 auto;
+  padding: 31px 0 0 0; }
+
+/* 4) PARTAGER */
+#partager  {
+    padding-top: 30px;
+
 }
+#partager .title {
+    margin: 0 auto;
+    display: block;
+}
+#partager .text{
+        padding: 22px 0 55px 0;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
 
+}
+.smartphone {
+  background: url(../img/skin/smartphone.png) 0 0 no-repeat;
+  width: 840px;
+  height: 268px;
+  margin: 0 auto;
+  position: relative; }
 
-/* LAYER 6 : QUESTIONS */
+.smartphone a {
+  display: block;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 108px;
+  transition: margin 300ms ease-in-out; }
+
+.smartphone .iphone {
+  left: 123px; }
+
+.smartphone .iphone:hover {
+  margin-left: 5px; }
+
+.smartphone .android {
+  left: 544px; }
+
+.smartphone .android:hover {
+  margin-left: 5px; }
+
+/* 6) QUESTIONS */
 #questions {
   padding-top: 100px;
   padding-bottom: 55px; }

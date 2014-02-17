@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 
     <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Merriweather:400,300,700,400italic,300italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Merriweather:400,300,700,400italic,300italic,700italic' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/base.css" type="text/css">
 
@@ -159,7 +159,17 @@
             <!-- 4) PARTAGER -->
             <div class="bg-marroon">
                 <div id="partager" class="page-width">
-                    partager
+                    <img class="title" src="img/data/partagez-vos-meilleurs-moments.png" alt="Soyez au courant des dernières infos. Partagez vos meilleurs moments. Avec l'application Wedding Party">
+
+                    <div class="smartphone">
+                        <a href="#" class="iphone">Pour iPhone</a>
+                        <a href="#" class="android">Pour android</a>
+                    </div>
+
+                    <p class="text">
+                        après l’installation, recherchez notre mariage “emilie&charles”
+                        pour centraliser  vos photos et vos commentaires
+                    </p>
                 </div>
             </div>
 
