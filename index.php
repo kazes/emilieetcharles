@@ -24,13 +24,13 @@
         <div id="header">
             <div class="page-width">
                 <ul id="nav">
-                    <li id="nav-1"><a href="#content">Le mariage</a></li>
-                    <li id="nav-2"><a href="#content">La demande</a></li>
-                    <li id="nav-3"><a href="#content">S'organiser</a></li>
-                    <li id="nav-4"><a href="#content" title="Retour en haut de page">Retour en haut de page</a></li>
-                    <li id="nav-5"><a href="#content">Partager</a></li>
-                    <li id="nav-6"><a href="#content">Liste de mariage</a></li>
-                    <li id="nav-7"><a href="#content">Contact</a></li>
+                    <li id="nav-1"><a href="#">Le mariage</a></li>
+                    <li id="nav-2"><a href="#">La demande</a></li>
+                    <li id="nav-3"><a href="#">S'organiser</a></li>
+                    <li id="nav-4"><a href="#" title="Retour en haut de page">Retour en haut de page</a></li>
+                    <li id="nav-5"><a href="#">Partager</a></li>
+                    <li id="nav-6"><a target="_blank" href="#http://charlesetemilie.zankyou.com/fr/liste-de-mariage">Liste de mariage</a></li>
+                    <li id="nav-7"><a href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
