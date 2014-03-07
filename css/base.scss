@@ -237,21 +237,19 @@ a {
   padding: 31px 0 0 0; }
 
 /* 4) PARTAGER */
-#partager  {
-    padding-top: 30px;
+#partager {
+  padding-top: 30px; }
 
-}
 #partager .title {
-    margin: 0 auto;
-    display: block;
-}
-#partager .text{
-        padding: 22px 0 55px 0;
-        font-size: 15px;
-        color: #fff;
-        text-align: center;
+  margin: 0 auto;
+  display: block; }
 
-}
+#partager .text {
+  padding: 22px 0 55px 0;
+  font-size: 15px;
+  color: #fff;
+  text-align: center; }
+
 .smartphone {
   background: url(../img/skin/smartphone.png) 0 0 no-repeat;
   width: 840px;
@@ -286,20 +284,29 @@ a {
 
 /* 5) LISTE DE MARIAGE */
 #liste-de-mariage {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
 #liste-de-mariage .title {
-    margin: 0 auto 22px auto;
-    display: block;
-}
+  margin: 0 auto 22px auto;
+  display: block; }
+
 #liste-de-mariage .bt-visitez {
-background: url(../img/skin/bt-visitez-notre-liste-de-mariage.png) 0 0 no-repeat;
-    width: 640px;
-    height: 53px;
-    display: block;
-    margin: 0 auto;
-}
+  background: url(../img/skin/bt-visitez-notre-liste-de-mariage.png) 0 0 no-repeat;
+  width: 640px;
+  height: 53px;
+  display: block;
+  margin: 0 auto;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase; }
+
+#liste-de-mariage .bt-visitez .intext {
+  padding-left: 77px; }
 
 /* 6) QUESTIONS */
 #questions {
