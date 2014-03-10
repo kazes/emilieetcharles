@@ -9,6 +9,7 @@
 /* colors */
 /* fonts */
 @import url(fw.css);
+@import url(icons.css);
 /*  =PRINT */
 /*  =RESET
 ----------------------------------------------------------------------------- */
@@ -161,6 +162,22 @@ a {
   width: 134px;
   padding: 0;
   height: 98px; }
+
+/* SCROLL BUTTONS */
+.scroll-buttons {
+    color: black;
+    position:fixed;
+    right:10px;
+    top:120px;
+    
+}
+.scroll-buttons .icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    outline: 1px solid red;
+    overflow: hidden;
+}
 
 /* 1) : LE MARIAGE */
 #mariage {

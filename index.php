@@ -3,41 +3,46 @@
 <head>
     <meta charset="utf-8">
 
+    <link rel="shortcut icon" href="img/favicon.ico">
+
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Merriweather:400,300,700,400italic,300italic,700italic' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/base.css" type="text/css">
 
     <title>Emilie & Charles</title>
-    <script>
-        var hasJS = function() {
-            var htmlTag = document.getElementsByTagName('html')[0];
-            htmlTag.className = (htmlTag.className + ' ' || '') + 'hasJS';
-        }();
-    </script>
 </head>
 
 <body>
     <div id="content">
+
+        <!-- HEADER -->
         <div id="header">
             <div class="page-width">
                 <ul id="nav">
-                    <li id="nav-1"><a href="#mariage">Le mariage</a></li>
-                    <li id="nav-2"><a href="#demande">La demande</a></li>
-                    <li id="nav-3"><a href="#sorganiser">S'organiser</a></li>
-                    <li id="nav-4"><a href="#" title="Retour en haut de page">Accueil</a></li>
-                    <li id="nav-5"><a href="#partager">Partager</a></li>
-                    <li id="nav-6"><a href="#liste-de-mariage">Liste de mariage</a></li>
-                    <li id="nav-7"><a href="#">Contact</a></li>
+                    <li id="nav-1"><a class="JS_scroll-to" href="#mariage">Le mariage</a></li>
+                    <li id="nav-2"><a class="JS_scroll-to" href="#demande">La demande</a></li>
+                    <li id="nav-3"><a class="JS_scroll-to" href="#sorganiser">S'organiser</a></li>
+                    <li id="nav-4"><a class="JS_scroll-to" href="#mariage" title="Retour en haut de page">Accueil</a></li>
+                    <li id="nav-5"><a class="JS_scroll-to" href="#partager">Partager</a></li>
+                    <li id="nav-6"><a class="JS_scroll-to" href="#liste-de-mariage">Liste de mariage</a></li>
+                    <li id="nav-7"><a class="JS_scroll-to" href="#questions">Contact</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="page-content">
 
+        <!-- SCROLL BUTTONS -->
+        <div class="scroll-buttons">
+            <div class="icon icon-arrow-up">u</div>
+            <div class="icon icon-arrow-down">d</div>
+        </div>
+
+
+        <div class="page-content">
             <!-- 1) LE MARIAGE -->
             <div id="mariage" class="page-width">
-                <img src="img/data/cover.png" class="img-100 ma db" alt="Emilie et Charles, le 2 Mai 2014 à Bénodet"/>
+                <img src="img/data/cover.png" class="img-100 ma db" alt="Emilie et Charles, le 2 Mai 2014 à Bénodet">
                 <p class="text">
                     Émilie + Charles = <3 : C’est la seule équation que Charles ait jamais réussi à résoudre…
                     et encore il a mis 8 ans !
@@ -226,6 +231,7 @@
 
     <!-- JQUERY javascript library -->
     <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
 
     <!-- all custom scripts in base.js -->
     <script src="js/base.js"></script>

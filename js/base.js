@@ -1,27 +1,18 @@
 /*------------------------------------------------------------------------------
-    JS Document (https://developer.mozilla.org/en/JavaScript)
-
     project:    Emilie & Charles
     created:    2014-02-09
     author:     florian.boudot@gmail.com
-    
 ----------------------------------------------------------------------------- */
 
 
 /* CONSTANTS */
 var d = document;
 var w = window;
+$w = $(w);
 pm = {};
 
 
 var debug = /localhost|flobou/.test(d.location.href);// 'true' in dev mode;
-
-/*  =UTILITIES */
-var log = function(x) {
-    if (typeof console != 'undefined' && debug) {
-        console.log(x);
-    }
-};
 
 
 /*  =WINDOW.ONLOAD
@@ -29,17 +20,22 @@ var log = function(x) {
 $(d).ready(function(){
 
 
+
     pm.headerActive();
+    pm.scrollTo();
 
 
 });
 
 
-/*  =EXAMPLE
------------------------------------------------------------------------------ */
+
+/**
+ * HEADER ACTIVE
+ * >> adds a border bottom when you scroll down
+ */
 pm.headerActive = function() {
-    var $header = $('#header'),
-        $w = $(w);
+    if (debug)console.info('pm.headerActive');
+    var $header = $('#header');
 
     $w.on('scroll', function(){
         var scroll_val = $w.scrollTop();
@@ -48,7 +44,23 @@ pm.headerActive = function() {
 };
 
 
+pm.scrollTo = function () {
+    if (debug)console.info('pm.scrollTo');
 
+    var $buttons = $('.JS_scroll-to');
+
+    $buttons.on('click', function(e){
+        e.preventDefault();
+        var $destination = $($(this).attr('href'));
+        $('html, body').animate({
+            scrollTop:$destination.offset().top - 109
+        }, {
+            duration:1000,
+            easing:'easeInOutQuart', // http://easings.net/
+            complete:function(){ }
+        })
+    });
+};
 
 
 
