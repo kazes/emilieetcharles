@@ -162,8 +162,8 @@
                     <img class="title" src="img/data/partagez-vos-meilleurs-moments.png" alt="Soyez au courant des dernières infos. Partagez vos meilleurs moments. Avec l'application Wedding Party">
 
                     <div class="smartphone">
-                        <a href="#" class="iphone">Pour iPhone</a>
-                        <a href="#" class="android">Pour android</a>
+                        <a target="_blank" href="http://itunes.apple.com/us/app/wedding-party/id494214305" class="iphone">Pour iPhone</a>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.micromobs.pkk" class="android">Pour android</a>
                     </div>
 
                     <p class="text">
