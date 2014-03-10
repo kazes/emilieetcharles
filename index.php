@@ -34,8 +34,8 @@
 
         <!-- SCROLL BUTTONS -->
         <div class="scroll-buttons">
-            <div class="icon icon-arrow-up">u</div>
-            <div class="icon icon-arrow-down">d</div>
+            <a class="icon icon-arrow-up">u</a>
+            <a class="icon icon-arrow-down">d</a>
         </div>
 
 
