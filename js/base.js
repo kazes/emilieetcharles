@@ -48,11 +48,13 @@ pm.scrollTo = function () {
     if (debug)console.info('pm.scrollTo');
 
     var $buttons = $('.JS_scroll-to');
+    var $page = $('html, body');
 
     $buttons.on('click', function(e){
         e.preventDefault();
         var $destination = $($(this).attr('href'));
-        $('html, body').animate({
+
+        $page.animate({
             scrollTop:$destination.offset().top - 109
         }, {
             duration:1000,
