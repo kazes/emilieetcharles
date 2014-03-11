@@ -16,17 +16,27 @@
 <body>
     <div id="content">
 
+        <?php
+            // layers names
+            $layer_1 = 'mariage';
+            $layer_2 = 'demande';
+            $layer_3 = 'sorganiser';
+            $layer_4 = 'partager';
+            $layer_5 = 'liste-de-mariage';
+            $layer_6 = 'questions';
+        ?>
+
         <!-- HEADER -->
         <div id="header">
             <div class="page-width">
                 <ul id="nav">
-                    <li id="nav-1"><a class="JS_scroll-to" href="#mariage">Le mariage</a></li>
-                    <li id="nav-2"><a class="JS_scroll-to" href="#demande">La demande</a></li>
-                    <li id="nav-3"><a class="JS_scroll-to" href="#sorganiser">S'organiser</a></li>
-                    <li id="nav-4"><a class="JS_scroll-to" href="#mariage" title="Retour en haut de page">Accueil</a></li>
-                    <li id="nav-5"><a class="JS_scroll-to" href="#partager">Partager</a></li>
-                    <li id="nav-6"><a class="JS_scroll-to" href="#liste-de-mariage">Liste de mariage</a></li>
-                    <li id="nav-7"><a class="JS_scroll-to" href="#questions">Contact</a></li>
+                    <li id="nav-1"><a class="JS_scroll-to" href="#<?php echo $layer_1; ?>">Le mariage</a></li>
+                    <li id="nav-2"><a class="JS_scroll-to" href="#<?php echo $layer_2; ?>">La demande</a></li>
+                    <li id="nav-3"><a class="JS_scroll-to" href="#<?php echo $layer_3; ?>">S'organiser</a></li>
+                    <li id="nav-4"><a class="JS_scroll-to" href="#<?php echo $layer_1; ?>" title="Retour en haut de page">Accueil</a></li>
+                    <li id="nav-5"><a class="JS_scroll-to" href="#<?php echo $layer_4; ?>">Partager</a></li>
+                    <li id="nav-6"><a class="JS_scroll-to" href="#<?php echo $layer_5; ?>">Liste de mariage</a></li>
+                    <li id="nav-7"><a class="JS_scroll-to" href="#<?php echo $layer_6; ?>">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -34,14 +44,14 @@
 
         <!-- SCROLL BUTTONS -->
         <div class="scroll-buttons">
-            <a class="icon icon-arrow-up">u</a>
-            <a class="icon icon-arrow-down">d</a>
+            <a id="bt-prev-layer" class="icon icon-arrow-up JS_scroll-to">u</a>
+            <a id="bt-next-layer" class="icon icon-arrow-down JS_scroll-to">d</a>
         </div>
 
 
         <div class="page-content">
             <!-- 1) LE MARIAGE -->
-            <div id="mariage" class="page-width">
+            <div id="<?php echo $layer_1; ?>" class="layer page-width">
                 <img src="img/data/cover.png" class="img-100 ma db" alt="Emilie et Charles, le 2 Mai 2014 à Bénodet">
                 <p class="text">
                     Émilie + Charles = <3 : C’est la seule équation que Charles ait jamais réussi à résoudre…
@@ -52,7 +62,7 @@
 
             <!-- 2) LA DEMANDE -->
             <div class="bg-marroon">
-                <div id="demande" class="page-width">
+                <div id="<?php echo $layer_2; ?>" class="page-width layer">
                     <div class="story-container">
                         <h2 class="title">
                             Émilie a dit oui !
@@ -73,8 +83,8 @@
 
             
             <!-- 3) S'ORGANISER -->
-            <div class="page-width" id="sorganiser">
-                <img class="db img-100 ma" src="img/data/le-premier-mai.png" alt="Le premier mai. Ce week-end là, c'est sûr vous n'acheterez pas de muguet"/>
+            <div id="<?php echo $layer_3; ?>" class="page-width layer">
+                <img class="db img-100 ma" src="img/data/le-premier-mai.png" alt="Le premier mai. Ce week-end là, c'est sûr vous n'acheterez pas de muguet">
 
                 <div class="program-container">
                     <div class="line">
@@ -163,7 +173,7 @@
 
             <!-- 4) PARTAGER -->
             <div class="bg-marroon">
-                <div id="partager" class="page-width">
+                <div id="<?php echo $layer_4; ?>" class="page-width layer">
                     <img class="title" src="img/data/partagez-vos-meilleurs-moments.png" alt="Soyez au courant des dernières infos. Partagez vos meilleurs moments. Avec l'application Wedding Party">
 
                     <div class="smartphone">
@@ -181,7 +191,7 @@
 
 
             <!-- 5) LISTE DE MARIAGE -->
-            <div id="liste-de-mariage" class="page-width">
+            <div id="<?php echo $layer_5; ?>" class="page-width layer">
                 <img class="title" src="img/data/liste-de-mariage.png" alt="Liste de mariage. Si vous souhaitez nous offrir un petit cadeau pour bien commencer notre vie à deux !"/>
                 <a href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage" class="bt-visitez">
                     <span class="intext">visitez notre liste de mariage</span>
@@ -191,8 +201,7 @@
 
             <!-- 6) QUESTIONS -->
             <div class="bg-marroon">
-                <div id="questions" class="page-width">
-
+                <div id="<?php echo $layer_6; ?>" class="page-width layer">
                     <img class="db ma" src="img/data/dautres-questions.png" alt="D'autres questions ?">
 
                     <div class="line contact-container">
