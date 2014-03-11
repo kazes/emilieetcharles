@@ -192,9 +192,10 @@ a {
 #nav a {
     text-decoration: none;
     padding: 0 18px;
+    transition: color 200ms ease-in-out;
 }
 #nav a.active {
-    outline:1px solid red;
+    color: red;
 }
 
 #nav-4 a {
