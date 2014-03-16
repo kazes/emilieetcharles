@@ -87,9 +87,13 @@ a {
 
 /* "scroll to" buttons are invisible if no href value */
 .JS_scroll-to{
+    opacity: 0;
+    transition: color 100ms ease-in-out, opacity 300ms ease-in-out, visibility 0 linear 300ms;
     visibility: hidden;
 }
 .JS_scroll-to[href^="#"]{
+    opacity: 1;
+    transition:opacity 300ms ease-in-out 0;
     visibility: visible;
 }
 
@@ -195,7 +199,7 @@ a {
     transition: color 200ms ease-in-out;
 }
 #nav a.active {
-    color: red;
+    color: #d99e8c;
 }
 
 #nav-4 a {
@@ -218,23 +222,21 @@ a {
 
 
 .scroll-buttons .icon {
-    /*visibility: hidden;*/
     color: #4e3b2b;
     width: 80px;
     height: 80px;
     text-decoration: none;
     font-size: 80px;
     cursor: pointer;
-    transition: color 100ms ease-in-out;
+    /*transition: color 100ms ease-in-out;*/
     display: block;
 }
 .scroll-buttons .icon.active {
-    visibility: visible;
+    /*visibility: visible;*/
 }
 .scroll-buttons .icon:hover {
     color: #f5b494;
 }
-
 .scroll-buttons .icon:active {
     color: #ffe261;
 }
