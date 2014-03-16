@@ -19,7 +19,7 @@ var HEADER_HEIGHT = 109;
 
 /*  =WINDOW.ONLOAD
 ----------------------------------------------------------------------------- */
-$(d).ready(function(){
+$(d).ready(function () {
     pm.headerActive();
     pm.scrollTo();
 });
@@ -50,42 +50,51 @@ pm.headerActive = function() {
     var $bt_scroll_prev = $('#bt-prev-layer');
     var $bt_scroll_next = $('#bt-next-layer');
     var $body = $('body');
+    var $nav = $('#nav');
+    var $nav_items = $nav.find('a');
+
     var setAnchorsToScrollbuttons = function (current_win_top) {
         if (debug)console.info('setAnchorsToScrollbuttons');
 
+        var is_page_top = current_win_top === 0;
         var is_page_bottom = current_win_top + $w.height() === $body.height() ;
-        console.log('is_page_bottom', is_page_bottom);
 
-        for (var i = 0, len = layers_tops.length; i < len; i++) {
-            var next_layer_top = layers_tops[i+1] || layers_tops[len-1];
-
-            if (current_win_top + HEADER_HEIGHT + 100 < next_layer_top){
-                var next_layer = layers_names[i+1] || layers_names[len-1];
-                var visible_layer = layers_names[is_page_bottom ? len-1 : i];
-                var prev_layer = layers_names[i-1] || layers_names[0];
+        var next_layer = layers_names[0];
+        var visible_layer = layers_names[0];
+        var prev_layer = layers_names[0];
 
 
-                // set anchors on scroll buttons
-                $bt_scroll_prev.attr('href', '#' + prev_layer);
-                $bt_scroll_next.attr('href', is_page_bottom ? '' : '#' + next_layer);
+        if(!is_page_bottom && !is_page_top) {
+            for (var i = 0, len = layers_tops.length; i < len; i++) {
+                var next_layer_top = layers_tops[i+1] || layers_tops[len-1];
 
-                // mark menu item as active
+                if (current_win_top + HEADER_HEIGHT + 100 < next_layer_top){
+                    next_layer = layers_names[i+1] || layers_names[len-1];
+                    visible_layer = layers_names[is_page_bottom ? len-1 : i];
+                    prev_layer = layers_names[i-1] || layers_names[0];
 
-                console.log('visible_layer', visible_layer);
-                $('#nav a').removeClass('active');
-                $('#nav').find('a[href="#'+visible_layer+'"]').first().addClass('active');
-
-                return false;
+                    break;
+                }
             }
         }
+
+
+        // set anchors on scroll buttons
+        $bt_scroll_prev.attr('href', is_page_top ? '' : '#' + prev_layer);
+        $bt_scroll_next.attr('href', is_page_bottom ? '' : '#' + next_layer);
+
+        // mark menu item as active
+
+        $nav_items.removeClass('active');
+        $nav.find('a[href="#'+visible_layer+'"]').first().addClass('active');
     };
 
     var SCROLL_TIMER = 100; // ms
     var SCROLL_TIMEOUT = null;
     var $header = $('#header');
-    $w.on('scroll', function(){
+    var setItemsActive = function () {
         clearTimeout(SCROLL_TIMEOUT);
-        SCROLL_TIMEOUT = setTimeout(function(){
+        SCROLL_TIMEOUT = setTimeout(function () {
             var scroll_val = $w.scrollTop();
 
             // add/remove border bottom to the header
@@ -94,7 +103,11 @@ pm.headerActive = function() {
             // set anchors to scroll buttons
             setAnchorsToScrollbuttons(scroll_val);
         }, SCROLL_TIMER);
-    });
+    };
+    $w.on('scroll', setItemsActive);
+
+    // init
+    setItemsActive();
 };
 
 
@@ -118,6 +131,8 @@ pm.scrollTo = function () {
             });
         }
     };
+
+
 
     $buttons.on('click', scrollToLayer);
 };
