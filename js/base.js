@@ -59,9 +59,9 @@ pm.headerActive = function() {
         var is_page_top = current_win_top === 0;
         var is_page_bottom = current_win_top + $w.height() === $body.height() ;
 
-        var next_layer = layers_names[0];
+        var next_layer = layers_names[1];
         var visible_layer = layers_names[0];
-        var prev_layer = layers_names[0];
+        var prev_layer = layers_names[layers_names.length - 2];
 
 
         if(!is_page_bottom && !is_page_top) {
