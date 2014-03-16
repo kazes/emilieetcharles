@@ -60,7 +60,7 @@ pm.headerActive = function() {
         var is_page_bottom = current_win_top + $w.height() === $body.height() ;
 
         var next_layer = layers_names[1];
-        var visible_layer = layers_names[0];
+        var visible_layer = layers_names[is_page_top ? 0 : layers_names.length - 1];
         var prev_layer = layers_names[layers_names.length - 2];
 
 
@@ -84,7 +84,6 @@ pm.headerActive = function() {
         $bt_scroll_next.attr('href', is_page_bottom ? '' : '#' + next_layer);
 
         // mark menu item as active
-
         $nav_items.removeClass('active');
         $nav.find('a[href="#'+visible_layer+'"]').first().addClass('active');
     };
