@@ -68,13 +68,13 @@
                             Émilie a dit oui !
                         </h2>
                         <p class="story">
-                            Emilie a dit « oui » ! Enfin, plutôt « vâng », <br/>
-                            parce que c’était sur la Baie d’Ha Long l’été dernier,<br/>
-                            un bel endroit pour se jeter à l’eau, non ?<br/>
-                            Depuis, nous n’avons pas touché terre.<br/>
-                            Nous n’accosterons que le 2 mai prochain à Bénodet.<br/>
-                            <br/>
-                            <br/>
+                            Emilie a dit « oui » ! Enfin, plutôt « vâng », <br>
+                            parce que c’était sur la Baie d’Ha Long l’été dernier,<br>
+                            un bel endroit pour se jeter à l’eau, non ?<br>
+                            Depuis, nous n’avons pas touché terre.<br>
+                            Nous n’accosterons que le 2 mai prochain à Bénodet.<br>
+                            <br>
+                            <br>
                             Nous comptons sur vous pour fêter ça !
                         </p>
                     </div>
@@ -93,8 +93,8 @@
                                 <img class="img-100 image" src="img/data/entete-mariage.png" alt="Mariage"/>
                                 <h4 class="title">vendredi 2 mai - 15h30</h4>
                                 <p class="text text-normal-1">
-                                    Nous nous marions ! <br/>
-                                    Rendez-vous à l’église St Thomas Becket, <br/>
+                                    Nous nous marions ! <br>
+                                    Rendez-vous à l’église St Thomas Becket, <br>
                                     sur le port de Bénodet.
                                 </p>
                                 <p class="link-more">
@@ -108,8 +108,8 @@
                                 <img class="img-100 image" src="img/data/entete-reception.png" alt="Réception"/>
                                 <h4 class="title">vendredi 2 mai - 18h</h4>
                                 <p class="text text-normal-1">
-                                    Nous célébrons ! Au manoir de Kerouzien, <br/>
-                                    à Plomelin, pour un cocktail suivi d’un dîner <br/>
+                                    Nous célébrons ! Au manoir de Kerouzien, <br>
+                                    à Plomelin, pour un cocktail suivi d’un dîner <br>
                                     & d’une soirée jusqu’au petit matin.
                                 </p>
                                 <p class="link-more">
@@ -123,8 +123,8 @@
                                 <img class="img-100 image" src="img/data/entete-brunch.png" alt="Brunch"/>
                                 <h4 class="title">samedi 3 mai - 12h30</h4>
                                 <p class="text text-normal-1">
-                                    Retour au manoir de Kerouzien, à Plomelin, <br/>
-                                    pour un déjeuner breton, <br/>
+                                    Retour au manoir de Kerouzien, à Plomelin, <br>
+                                    pour un déjeuner breton, <br>
                                     le corps fourbu mais l’esprit léger.
                                 </p>
                             </div>
@@ -140,8 +140,8 @@
                                     <img class="img-100 image" src="img/data/entete-tourisme.png" alt="Tourisme"/>
                                     <h4 class="title">jeudi 1er mai - dimanche 4 mai</h4>
                                     <p class="text text-normal-1">
-                                        C’est très beau la Bretagne, <br/>
-                                        profitez-en vous aussi, <br/>
+                                        C’est très beau la Bretagne, <br>
+                                        profitez-en vous aussi, <br>
                                         de votre week-end du 1er mai !
                                     </p>
                                     <p class="link-more">
@@ -155,8 +155,8 @@
                                     <img class="img-100 image" src="img/data/entete-et-la-nuit.png" alt="Et la nuit ?"/>
                                     <h4 class="title">hôtels, b&b, etc.</h4>
                                     <p class="text text-normal-1">
-                                        Rien ne sert de courir, <br/>
-                                        il faut dormir dans le coin ! <br/>
+                                        Rien ne sert de courir, <br>
+                                        il faut dormir dans le coin ! <br>
                                         Réservez vite, c’est un long week-end  !
                                     </p>
                                     <p class="link-more">
@@ -174,7 +174,7 @@
             <!-- 4) PARTAGER -->
             <div class="bg-marroon">
                 <div id="<?php echo $layer_4; ?>" class="page-width layer">
-                    <img class="title" src="img/data/partagez-vos-meilleurs-moments.png" alt="Soyez au courant des dernières infos. Partagez vos meilleurs moments. Avec l'application Wedding Party">
+                    <img class="title img-100" src="img/data/partagez-vos-meilleurs-moments.png" alt="Soyez au courant des dernières infos. Partagez vos meilleurs moments. Avec l'application Wedding Party">
 
                     <div class="smartphone">
                         <a target="_blank" href="http://itunes.apple.com/us/app/wedding-party/id494214305" class="iphone">Pour iPhone</a>
@@ -192,7 +192,7 @@
 
             <!-- 5) LISTE DE MARIAGE -->
             <div id="<?php echo $layer_5; ?>" class="page-width layer">
-                <img class="title" src="img/data/liste-de-mariage.png" alt="Liste de mariage. Si vous souhaitez nous offrir un petit cadeau pour bien commencer notre vie à deux !"/>
+                <img class="title img-100" src="img/data/liste-de-mariage.png" alt="Liste de mariage. Si vous souhaitez nous offrir un petit cadeau pour bien commencer notre vie à deux !"/>
                 <a href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage" class="bt-visitez">
                     <span class="intext">visitez notre liste de mariage</span>
                 </a>
@@ -202,7 +202,7 @@
             <!-- 6) QUESTIONS -->
             <div class="bg-marroon">
                 <div id="<?php echo $layer_6; ?>" class="page-width layer">
-                    <img class="db ma" src="img/data/dautres-questions.png" alt="D'autres questions ?">
+                    <img class="db ma img-100" src="img/data/dautres-questions.png" alt="D'autres questions ?">
 
                     <div class="line contact-container">
                         <p class="contact unit size1of3">
@@ -221,7 +221,7 @@
                         </p>
                     </div>
 
-                    <img class="db ma" src="img/data/a-tres-bientot-le-2-mai-2014.png" alt="à très bientôt le 2 mai 2014">
+                    <img class="db ma img-100" src="img/data/a-tres-bientot-le-2-mai-2014.png" alt="à très bientôt le 2 mai 2014">
 
                 </div>
             </div>

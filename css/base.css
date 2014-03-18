@@ -157,8 +157,10 @@ a {
 .page-width {
     margin: 0 auto;
     width: 100%;
-    max-width: 960px;
+    padding-right: 2%;
+    max-width: 980px;
     position: relative;
+    padding-left: 2%;
 }
 
 /* HEADER */
@@ -179,7 +181,7 @@ a {
 
 /* HEADER: NAV */
 #nav {
-    width: 960px;
+    max-width: 960px;
     text-align: center;
     padding-top: 4px;
     font-size: 14px;
@@ -260,11 +262,12 @@ a {
 }
 
 #demande .story-container {
-    width: 366px;
+    width: 38.125%;
     position: absolute;
     text-align: center;
     top: 135px;
-    left: 512px;
+    right: 8.54%;
+    transition:width 150ms ease-in-out, left 150ms ease-in-out;
 }
 
 #demande .title {
@@ -348,8 +351,8 @@ a {
 }
 
 .smartphone {
-    background: url(../img/skin/smartphone.png) 0 0 no-repeat;
-    width: 840px;
+    background: url(../img/skin/smartphone.png) center 0 no-repeat;
+    max-width: 840px;
     height: 268px;
     margin: 0 auto;
     position: relative;
@@ -365,12 +368,12 @@ a {
     font-size: 28px;
     text-transform: uppercase;
     position: absolute;
-    top: 108px;
+    top: 40.298507462686565%;
     transition: margin 300ms ease-in-out;
 }
 
 .smartphone .iphone {
-    left: 123px;
+    left: 14.642857142857142%;
 }
 
 .smartphone .iphone:hover {
@@ -378,7 +381,7 @@ a {
 }
 
 .smartphone .android {
-    left: 544px;
+    left: 64.76190476190476%;
 }
 
 .smartphone .android:hover {
@@ -448,6 +451,20 @@ a {
 
 #footer a:hover {
     text-decoration: underline;
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+    #demande .story-container {
+        width: 50%;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+
+
 }
 
 /* END */
