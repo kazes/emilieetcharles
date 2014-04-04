@@ -145,7 +145,7 @@
                                         de votre week-end du 1er mai !
                                     </p>
                                     <p class="link-more">
-                                        <a href="#">découvrez la région</a>
+                                        <a target="_blank" href="http://www.finisteretourisme.com/preparez" title="Finistère Tourisme (département 29)">découvrez la région</a>
                                     </p>
                                 </div>
                             </div>
@@ -160,7 +160,8 @@
                                         Réservez vite, c’est un long week-end  !
                                     </p>
                                     <p class="link-more">
-                                        <a href="#">trouvez votre hôtel</a>
+                                        <!--<a target="_blank" href="http://www.finisteretourisme.com/appli-finistere" title="Téléchargez l'application mobile du Finistère sur l'App Store et Google Play">trouvez votre hôtel</a>-->
+                                        <a target="_blank" href="docs/hebergement_benodet.pdf" title="Téléchargez notre sélection d'hébergement dans la région (pdf)">trouvez votre hôtel</a>
                                     </p>
                                 </div>
                             </div>
