@@ -20,17 +20,17 @@ var HEADER_HEIGHT = 109;
 /*  =WINDOW.ONLOAD
 ----------------------------------------------------------------------------- */
 $(d).ready(function () {
-    pm.headerActive();
+    pm.headerManager();
     pm.scrollTo();
 });
 
 
 /**
- * HEADER ACTIVE
+ * HEADER MANAGER
  * >> adds a border bottom when you scroll down
  */
-pm.headerActive = function() {
-    if (debug)console.info('pm.headerActive');
+pm.headerManager = function() {
+    if (debug)console.info('pm.headerManager');
 
     // get all top values for all layers
     var layers_tops = [];
@@ -38,7 +38,7 @@ pm.headerActive = function() {
     var getLayersInfos = function () {
         var $layer = $(this);
         var layer_name = $layer.attr('id');
-        var layer_top = $layer.offset().top;
+        var layer_top = $layer.offset().top; // todo : update value on resize
 
         layers_tops.push(layer_top);
         layers_names.push(layer_name);
@@ -50,19 +50,33 @@ pm.headerActive = function() {
     var $bt_scroll_prev = $('#bt-prev-layer');
     var $bt_scroll_next = $('#bt-next-layer');
     var $body = $('body');
+
+
+    /**
+     * Mark menu item as active
+     * @param layer_in_zone {string}
+     */
     var $nav = $('#nav');
     var $nav_items = $nav.find('a');
+    var markMenuItemActive = function (layer_in_zone) {
+        if (debug)console.info('markMenuItemActive');
 
+        $nav_items.removeClass('active');
+        $nav.find('a[href="#'+layer_in_zone+'"]').first().addClass('active');
+    };
+
+    /**
+     * setAnchorsToScrollbuttons
+     * @param current_win_top {number}
+     */
     var setAnchorsToScrollbuttons = function (current_win_top) {
         if (debug)console.info('setAnchorsToScrollbuttons');
 
         var is_page_top = current_win_top === 0;
         var is_page_bottom = current_win_top + $w.height() === $body.height() ;
-
         var next_layer = layers_names[1];
         var visible_layer = layers_names[is_page_top ? 0 : layers_names.length - 1];
         var prev_layer = layers_names[layers_names.length - 2];
-
 
         if(!is_page_bottom && !is_page_top) {
             for (var i = 0, len = layers_tops.length; i < len; i++) {
@@ -72,20 +86,17 @@ pm.headerActive = function() {
                     next_layer = layers_names[i+1] || layers_names[len-1];
                     visible_layer = layers_names[is_page_bottom ? len-1 : i];
                     prev_layer = layers_names[i-1] || layers_names[0];
-
                     break;
                 }
             }
         }
 
-
-        // set anchors on scroll buttons
+        // set #anchors on scroll buttons
         $bt_scroll_prev.attr('href', is_page_top ? '' : '#' + prev_layer);
         $bt_scroll_next.attr('href', is_page_bottom ? '' : '#' + next_layer);
 
         // mark menu item as active
-        $nav_items.removeClass('active');
-        $nav.find('a[href="#'+visible_layer+'"]').first().addClass('active');
+        markMenuItemActive(visible_layer);
     };
 
     var SCROLL_TIMER = 100; // ms
@@ -110,12 +121,13 @@ pm.headerActive = function() {
 };
 
 
+/**
+ * pm.scrollTo()
+ * On click scroll to destination layer
+ */
 pm.scrollTo = function () {
     if (debug)console.info('pm.scrollTo');
-
-    var $buttons = $('.JS_scroll-to');
     var $page = $('html, body');
-
 
     var scrollToLayer = function (e) {
         e.preventDefault();
@@ -131,8 +143,8 @@ pm.scrollTo = function () {
         }
     };
 
-
-
+    // bind arrow top, arrow bottom and all menu buttons
+    var $buttons = $('.JS_scroll-to');
     $buttons.on('click', scrollToLayer);
 };
 
