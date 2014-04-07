@@ -15,7 +15,7 @@ pm = {};
 var debug = /localhost|flobou/.test(d.location.href);// 'true' in dev mode;
 
 
-var HEADER_HEIGHT = 109;
+var HEADER_HEIGHT = 109; // default
 
 /*  =WINDOW.ONLOAD
 ----------------------------------------------------------------------------- */
@@ -134,6 +134,11 @@ pm.headerManager = function() {
     };
 
 
+    var getHeaderHeight = function () {
+        if (debug)console.info('getHeaderHeight');
+        HEADER_HEIGHT = $header.outerHeight();
+    };
+
     /**
      * the resize manager
      */
@@ -146,7 +151,7 @@ pm.headerManager = function() {
 
             // set anchors to the scroll buttons
             setAnchorsToScrollbuttons(top);
-
+            getHeaderHeight();
             updatePositionValues();
         }, RESIZE_TIMER);
     };
@@ -176,6 +181,7 @@ pm.headerManager = function() {
 
     // init
     var win_top = $w.scrollTop();
+    getHeaderHeight();
     updatePositionValues();
     markHeaderActive(win_top);
     setAnchorsToScrollbuttons(win_top);
