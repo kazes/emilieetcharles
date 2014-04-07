@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-height,height=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- GOOGLE FONT -->
@@ -207,18 +207,18 @@
 
                     <div class="line contact-container">
                         <p class="contact unit size1of3">
-                            <span class="ttu db font-18 merriweather-bold">écrivez-nous ?</span>
-                            <a href="mailto:charlesandemilie@gmail.com">charlesandemilie@gmail.com</a>
+                            <span class="ttu db title merriweather-bold">écrivez-nous ?</span>
+                            <a class="text" href="mailto:charlesandemilie@gmail.com">charlesandemilie@gmail.com</a>
                         </p>
 
                         <p class="contact unit size1of3">
-                            <span class="ttu db font-18 merriweather-bold">appelez émilie</span>
-                            06 99 35 00 22
+                            <span class="ttu db title merriweather-bold">appelez émilie</span>
+                            <span class="text">06 99 35 00 22</span>
                         </p>
 
                         <p class="contact unit size1of3">
-                            <span class="ttu db font-18 merriweather-bold">appelez charles</span>
-                            06 59 71 13 61
+                            <span class="ttu db title merriweather-bold">appelez charles</span>
+                            <span class="text">06 59 71 13 61</span>
                         </p>
                     </div>
 

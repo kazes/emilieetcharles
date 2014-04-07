@@ -10,18 +10,18 @@ var d = document;
 var w = window;
 $w = $(w);
 pm = {};
-
-
 var debug = /localhost|flobou/.test(d.location.href);// 'true' in dev mode;
-
-
 var HEADER_HEIGHT = 109; // default
 
-/*  =WINDOW.ONLOAD
------------------------------------------------------------------------------ */
+var is_mobile = /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+
+
+/* WINDOW.ONLOAD */
 $(d).ready(function () {
-    pm.headerManager();
-    pm.scrollTo();
+    if(!is_mobile){
+        pm.headerManager();
+        pm.scrollTo();
+    }
 });
 
 
@@ -36,6 +36,7 @@ pm.headerManager = function() {
     var $header = $('#header');
     var $allLayers = $('.layer');
     var $body = $('body');
+    var $page_content = $('.page-content');
     var $bt_scroll_prev = $('#bt-prev-layer');
     var $bt_scroll_next = $('#bt-next-layer');
     var $nav = $('#nav');
@@ -64,7 +65,7 @@ pm.headerManager = function() {
     /**
      * set position values (on init and on resize)
      */
-    var updatePositionValues = function () {
+    var setPositionValues = function () {
         if (debug)console.info('updatePositionValues');
 
         // reset arrays
@@ -134,9 +135,11 @@ pm.headerManager = function() {
     };
 
 
-    var getHeaderHeight = function () {
+    var setHeaderHeight = function () {
         if (debug)console.info('getHeaderHeight');
         HEADER_HEIGHT = $header.outerHeight();
+        $page_content.css({ 'padding-top': HEADER_HEIGHT - 1 });
+
     };
 
     /**
@@ -149,10 +152,9 @@ pm.headerManager = function() {
 
             var top = $w.scrollTop();
 
-            // set anchors to the scroll buttons
             setAnchorsToScrollbuttons(top);
-            getHeaderHeight();
-            updatePositionValues();
+            setHeaderHeight();
+            setPositionValues();
         }, RESIZE_TIMER);
     };
 
@@ -181,8 +183,8 @@ pm.headerManager = function() {
 
     // init
     var win_top = $w.scrollTop();
-    getHeaderHeight();
-    updatePositionValues();
+    setHeaderHeight();
+    setPositionValues();
     markHeaderActive(win_top);
     setAnchorsToScrollbuttons(win_top);
 };

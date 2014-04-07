@@ -23,7 +23,7 @@
 body {
     font-family: "Merriweather", serif;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 62.5%; /* 1em = 10px */
     margin: 0;
     height: 100%;
     color: #8f6f4d;
@@ -127,7 +127,7 @@ a {
 }
 
 .font-18 {
-    font-size: 18px;
+    font-size: 1.8em;
 }
 
 .font-28 {
@@ -144,14 +144,13 @@ a {
 }
 
 .text-normal-1 {
-    font-size: 12px;
+    font-size: 1.2em;
     line-height: 20px;
 }
 
 /* STRUCTURE */
 .page-content {
-    padding-top: 108px;
-    /* header height */
+    padding-top: 108px;/* header height is reset in js */
 }
 
 .page-width {
@@ -184,7 +183,7 @@ a {
     max-width: 960px;
     text-align: center;
     padding-top: 4px;
-    font-size: 14px;
+    font-size: 1.4em;
     font-style: italic;
     text-transform: uppercase;
 }
@@ -250,7 +249,7 @@ a {
 
 #mariage .text {
     padding: 35px 0 75px 0;
-    font-size: 15px;
+    font-size: 1.5em;
     color: #4e3b2b;
     text-align: center;
 }
@@ -274,12 +273,12 @@ a {
     padding-bottom: 20px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 2.8em;
     text-transform: uppercase;
 }
 
 #demande .story {
-    font-size: 12px;
+    font-size: 1.2em;
     line-height: 20px;
 }
 
@@ -294,7 +293,7 @@ a {
 }
 
 .program .title {
-    font-size: 14px;
+    font-size: 1.4em;
     text-transform: uppercase;
     font-weight: 700;
     /* bold */
@@ -318,6 +317,7 @@ a {
     background: url(../img/skin/icon-plus.png) center 0 no-repeat;
     display: block;
     padding-top: 40px;
+    font-size: 1.2em;
     font-weight: 700;
     /* bold */
 }
@@ -345,7 +345,7 @@ a {
 
 #partager .text {
     padding: 22px 0 55px 0;
-    font-size: 15px;
+    font-size: 1.5em;
     color: #fff;
     text-align: center;
 }
@@ -365,7 +365,7 @@ a {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 2.8em;
     text-transform: uppercase;
     position: absolute;
     top: 40.298507462686565%;
@@ -410,7 +410,7 @@ a {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 2.8em;
     text-transform: uppercase;
 }
 
@@ -429,11 +429,15 @@ a {
 }
 
 #questions .contact {
-    font-size: 15px;
     text-align: center;
     line-height: 25px;
 }
-
+#questions .contact .title {
+    font-size: 1.8em;
+}
+#questions .contact .text {
+    font-size: 1.5em;
+}
 #questions .contact-container {
     padding: 30px 0 37px 0;
 }
@@ -442,6 +446,7 @@ a {
 #footer {
     text-align: center;
     padding: 10px 0;
+    font-size: 1.2em;
 }
 
 #footer a {
@@ -456,9 +461,16 @@ a {
 
 
 /* MOBILE AND TABLET */
-@media screen and (max-width: 960px) {
+@media screen and (max-device-width : 800px) {
+    .page-content {
+        padding-top: 0;
+    }
+
     /* HEADER AND NAV */
     #header {
+        position: static;
+        left: auto;
+        right: auto;
         min-height: 108px;
         height: auto; /* todo : make this height a variable in js */
     }
@@ -487,10 +499,6 @@ a {
     #demande .story-container {
         width: 50%;
     }
-
-}
-@media screen and (max-width: 1024px) {
-
 
 }
 
