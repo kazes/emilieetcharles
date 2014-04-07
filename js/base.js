@@ -32,38 +32,61 @@ $(d).ready(function () {
 pm.headerManager = function() {
     if (debug)console.info('pm.headerManager');
 
-    // get all top values for all layers
+    // init global variables
+    var $header = $('#header');
+    var $allLayers = $('.layer');
+    var $body = $('body');
+    var $bt_scroll_prev = $('#bt-prev-layer');
+    var $bt_scroll_next = $('#bt-next-layer');
+    var $nav = $('#nav');
+    var $nav_items = $nav.find('a');
     var layers_tops = [];
     var layers_names = [];
-    var getLayersInfos = function () {
+    var SCROLL_TIMER = 100; // ms
+    var SCROLL_TIMEOUT = null;
+    var RESIZE_TIMER = 200; // ms
+    var RESIZE_TIMEOUT = null;
+
+
+    /**
+     * store all top values and names for all layers in arrays
+     */
+    var setLayersNamesAndTopValues = function () {
         var $layer = $(this);
         var layer_name = $layer.attr('id');
-        var layer_top = $layer.offset().top; // todo : update value on resize
+        var layer_top = $layer.offset().top;
 
         layers_tops.push(layer_top);
         layers_names.push(layer_name);
     };
-    $('.layer').each(getLayersInfos);
 
 
+    /**
+     * set position values (on init and on resize)
+     */
+    var updatePositionValues = function () {
+        if (debug)console.info('updatePositionValues');
 
-    var $bt_scroll_prev = $('#bt-prev-layer');
-    var $bt_scroll_next = $('#bt-next-layer');
-    var $body = $('body');
+        // reset arrays
+        layers_tops = [];
+        layers_names = []; // todo : this array shouldn't be reset
+
+        // and fill arrays
+        $allLayers.each(setLayersNamesAndTopValues);
+    };
 
 
     /**
      * Mark menu item as active
      * @param layer_in_zone {string}
      */
-    var $nav = $('#nav');
-    var $nav_items = $nav.find('a');
     var markMenuItemActive = function (layer_in_zone) {
         if (debug)console.info('markMenuItemActive');
 
         $nav_items.removeClass('active');
         $nav.find('a[href="#'+layer_in_zone+'"]').first().addClass('active');
     };
+
 
     /**
      * setAnchorsToScrollbuttons
@@ -86,7 +109,7 @@ pm.headerManager = function() {
                     next_layer = layers_names[i+1] || layers_names[len-1];
                     visible_layer = layers_names[is_page_bottom ? len-1 : i];
                     prev_layer = layers_names[i-1] || layers_names[0];
-                    break;
+                    break; // and dance
                 }
             }
         }
@@ -95,29 +118,67 @@ pm.headerManager = function() {
         $bt_scroll_prev.attr('href', is_page_top ? '' : '#' + prev_layer);
         $bt_scroll_next.attr('href', is_page_bottom ? '' : '#' + next_layer);
 
-        // mark menu item as active
+        // and mark menu item as active
         markMenuItemActive(visible_layer);
     };
 
-    var SCROLL_TIMER = 100; // ms
-    var SCROLL_TIMEOUT = null;
-    var $header = $('#header');
-    var setItemsActive = function () {
+
+    /**
+     * mark header as active (adds a border bottom)
+     * @param scroll_top
+     */
+    var markHeaderActive = function (scroll_top) {
+        if (debug)console.info('markHeaderActive');
+
+        $header[scroll_top > 30 ? 'addClass' : 'removeClass']('active');
+    };
+
+
+    /**
+     * the resize manager
+     */
+    var resizeManager = function () {
+        clearTimeout(RESIZE_TIMEOUT);
+        RESIZE_TIMEOUT = setTimeout(function () {
+            if (debug)console.info('resizeManager');
+
+            var top = $w.scrollTop();
+
+            // set anchors to the scroll buttons
+            setAnchorsToScrollbuttons(top);
+
+            updatePositionValues();
+        }, RESIZE_TIMER);
+    };
+
+
+    /**
+     * the scroll manager
+     */
+    var scrollManager = function () {
         clearTimeout(SCROLL_TIMEOUT);
         SCROLL_TIMEOUT = setTimeout(function () {
-            var scroll_val = $w.scrollTop();
+            if (debug)console.info('scrollManager');
+            var top = $w.scrollTop();
 
             // add/remove border bottom to the header
-            $header[scroll_val > 30 ? 'addClass' : 'removeClass']('active');
+            markHeaderActive(top);
 
-            // set anchors to scroll buttons
-            setAnchorsToScrollbuttons(scroll_val);
+            // set anchors to the scroll buttons
+            setAnchorsToScrollbuttons(top);
         }, SCROLL_TIMER);
     };
-    $w.on('scroll', setItemsActive);
+
+
+    // binds
+    $w.on('resize', resizeManager);
+    $w.on('scroll', scrollManager);
 
     // init
-    setItemsActive();
+    var win_top = $w.scrollTop();
+    updatePositionValues();
+    markHeaderActive(win_top);
+    setAnchorsToScrollbuttons(win_top);
 };
 
 
