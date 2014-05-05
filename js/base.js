@@ -22,6 +22,9 @@ $(d).ready(function () {
         pm.headerManager();
         pm.scrollTo();
     }
+    else {
+        $('body').addClass('mobile');
+    }
 });
 
 

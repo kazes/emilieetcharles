@@ -18,12 +18,13 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
+    max-height: 999999px;/* prevent android to zoom font-size*/
 }
 
 body {
     font-family: "Merriweather", serif;
     font-weight: 300;
-    font-size: 62.5%; /* 1em = 10px */
+    font-size: 12px;
     margin: 0;
     height: 100%;
     color: #8f6f4d;
@@ -99,7 +100,7 @@ a {
 
 /* image width resizable up to its max value */
 .img-100 {
-    max-width: 100%;
+    /*max-width: 100%;*/
 }
 
 /* COLORS */
@@ -127,7 +128,7 @@ a {
 }
 
 .font-18 {
-    font-size: 1.8em;
+    font-size: 18px;
 }
 
 .font-28 {
@@ -155,10 +156,12 @@ a {
 
 .page-width {
     margin: 0 auto;
-    width: 100%;
-    padding-right: 2%;
-    max-width: 980px;
+    width: 980px;
     position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 2%;
     padding-left: 2%;
 }
 
@@ -183,7 +186,7 @@ a {
     max-width: 960px;
     text-align: center;
     padding-top: 4px;
-    font-size: 1.4em;
+    font-size: 14px;
     font-style: italic;
     text-transform: uppercase;
 }
@@ -261,24 +264,23 @@ a {
 }
 
 #demande .story-container {
-    width: 38.125%;
+    width: 366px;
     position: absolute;
     text-align: center;
     top: 135px;
-    right: 8.54%;
-    transition:width 150ms ease-in-out, left 150ms ease-in-out;
+    left: 512px;
 }
 
 #demande .title {
     padding-bottom: 20px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
-    font-size: 2.8em;
+    font-size: 28px;
     text-transform: uppercase;
 }
 
 #demande .story {
-    font-size: 1.2em;
+    font-size: 12px;
     line-height: 20px;
 }
 
@@ -293,7 +295,7 @@ a {
 }
 
 .program .title {
-    font-size: 1.4em;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
     /* bold */
@@ -345,14 +347,14 @@ a {
 
 #partager .text {
     padding: 22px 0 55px 0;
-    font-size: 1.5em;
+    font-size: 15px;
     color: #fff;
     text-align: center;
 }
 
 .smartphone {
-    background: url(../img/skin/smartphone.png) center 0 no-repeat;
-    max-width: 840px;
+    background: url(../img/skin/smartphone.png) 0 0 no-repeat;
+    width: 840px;
     height: 268px;
     margin: 0 auto;
     position: relative;
@@ -365,15 +367,17 @@ a {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 2.8em;
+    font-size: 28px;
     text-transform: uppercase;
     position: absolute;
-    top: 40.298507462686565%;
+    top: 108px;
+    height: 50px;
+    line-height: 41px;
     transition: margin 300ms ease-in-out;
 }
 
 .smartphone .iphone {
-    left: 14.642857142857142%;
+    left: 123px;
 }
 
 .smartphone .iphone:hover {
@@ -381,7 +385,7 @@ a {
 }
 
 .smartphone .android {
-    left: 64.76190476190476%;
+    left: 544px;
 }
 
 .smartphone .android:hover {
@@ -406,16 +410,16 @@ a {
     display: block;
     margin: 0 auto;
     letter-spacing: 1.4px;
+    text-align: center;
     text-decoration: none;
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 2.8em;
+    font-size: 28px;
     text-transform: uppercase;
 }
 
 #liste-de-mariage .bt-visitez .intext {
-    padding-left: 77px;
 }
 
 /* 6) QUESTIONS */
@@ -461,46 +465,58 @@ a {
 
 
 /* MOBILE AND TABLET */
-@media screen and (max-device-width : 800px) {
-    .page-content {
-        padding-top: 0;
-    }
-
-    /* HEADER AND NAV */
-    #header {
-        position: static;
-        left: auto;
-        right: auto;
-        min-height: 108px;
-        height: auto; /* todo : make this height a variable in js */
-    }
-    #nav {
-        padding-left: 134px;
-        overflow: hidden;
-        text-align: left;
-    }
-    #nav li {
-        float: left;
-    }
-    #nav a {
-        padding: 15px 20px 15px 20px;
-        display: block;
-    }
-    #nav-4 {
-        position: absolute;
-        left: 5px;
-        top: 5px;
-    }
-    #nav-4 a {
-        padding: 0;
-    }
-
-    /* LAYER  */
-    #demande .story-container {
-        width: 50%;
-    }
-
+.mobile .page-content {
+    padding-top: 0;
 }
+.mobile #header {
+    padding-top: 20px;
+    position: static;
+    left: auto;
+    right: auto;
+    min-height: 108px;
+    height: auto;
+}
+.mobile .smartphone a {
+    top: 118px;
+}
+.mobile #liste-de-mariage .bt-visitez .intext {
+    padding-top: 15px;
+    display: inline-block;
+}
+/*
+#nav {
+    padding-left: 134px;
+    overflow: hidden;
+    text-align: left;
+}
+#nav li {
+    float: left;
+}
+#nav a {
+    padding: 15px 20px 15px 20px;
+    display: block;
+}
+#nav-4 {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+
+    float: none;
+}
+#nav-4 a {
+    padding: 0;
+}
+
+
+#demande .story-container {
+    width: 50%;
+}
+
+
+#liste-de-mariage .bt-visitez {
+    font-size: 2.8vw;
+}*/
+
 
 /* END */
 

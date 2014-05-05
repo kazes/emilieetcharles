@@ -2,20 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-height,height=device-width, initial-scale=1.0">
+<!--    <meta name="viewport" content="initial">-->
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Merriweather:400,300,700,400italic,300italic,700italic' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" href="css/base.css" type="text/css">
-
     <title>Emilie & Charles</title>
 </head>
 
 <body>
     <div id="content">
-
         <?php
             // layers names
             $layer_1 = 'mariage';
@@ -195,7 +192,7 @@
             <div id="<?php echo $layer_5; ?>" class="page-width layer">
                 <img class="title img-100" src="img/data/liste-de-mariage.png" alt="Liste de mariage. Si vous souhaitez nous offrir un petit cadeau pour bien commencer notre vie à deux !"/>
                 <a href="http://charlesetemilie.zankyou.com/fr/liste-de-mariage" class="bt-visitez">
-                    <span class="intext">visitez notre liste de mariage</span>
+                     <span class="intext">+ visitez notre liste de mariage</span>
                 </a>
             </div>
 
